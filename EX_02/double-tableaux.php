@@ -11,7 +11,15 @@ $panier= [
 ];
 function afficher_panier($panier)
 {
-
+    foreach ($panier as $elements => $prix)
+    {
+        echo'
+        <ul>
+            <li>'.$prix[0]. '</li>
+            <li>'.$prix[1]. '</li>
+            <li>'.$prix[2]. '</li>
+        </ul>';
+    }
     return;
 }
 afficher_panier($panier)

@@ -22,5 +22,14 @@ function afficher_panier($panier)
     }
     return;
 }
-afficher_panier($panier)
+function calculer_total_panier($panier)
+{
+    $total=0;
+foreach ($panier as $elements => $prix){
+    $total= $total + $prix[1] * $prix[2];
+}
+    echo'<p>Le prix total du panier est '.$total. 'euros</p>';
+}
+afficher_panier($panier);
+calculer_total_panier($panier);
 ?>
